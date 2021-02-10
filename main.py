@@ -10,7 +10,7 @@ theBoard = []
 #do: print a graphic for the board
 #out: none
 
-def printBoar(board):
+def printBoard(board):
     pass
 
 #3a. (fun) Determine if player is X or O

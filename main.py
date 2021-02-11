@@ -3,7 +3,7 @@
 #Date:
 
 #1. (Var) Setup the empty board as a list
-theBoard = []
+theBoard = [' ']*10
 
 #2. (fun) Print the board.
 #in: a 10 item list (either x, o or ' ')
@@ -11,7 +11,13 @@ theBoard = []
 #out: none
 
 def printBoard(board):
-    pass
+    print(" "+board[7]+" | "+board[8]+" | "+board[9])
+    print("---+---+---")
+    print(" "+board[4]+" | "+board[5]+" | "+board[6])
+    print("---+---+---")
+    print(" "+board[1]+" | "+board[2]+" | "+board[3])
+    
+#printBoard(theBoard)
 
 #3a. (fun) Determine if player is X or O
 player1 = ''
@@ -22,7 +28,23 @@ player2 = ''
 #out: None
 
 def chooseLetter():
-    pass
+  global player1
+  global player2
+
+  while True:
+    choice = input("P1 would you like to be X or O? ").lower()
+
+    if choice == 'x': 
+      player1 = 'X'
+      player2 = 'O'
+      return
+    elif choice == 'o':
+      player1 = 'O'
+      player2 = 'X'
+      return
+
+#chooseLetter()
+    
 
 
 #3b. (fun) Choose starting player 1 or 2
